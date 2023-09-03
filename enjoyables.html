@@ -8,7 +8,7 @@
 <meta property="og:description" content="a goofy little website with my interests and references all over the place, enjoy your stay" />
 <meta property="og:image" content="https://ikupoku.me/nyukkuri.png" />
 <meta content="#16537e" data-react-helmet="true" name="theme-color" />
-    <title>test web site</title>
+    <title>stuff i like</title>
     <link rel="icon" href="https://ikupoku.me/nyukkuri.png">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <!-- hi hi if youre seeing this that means youre using inspect element to look through my website! im honestly flattered but you should know that a LOT of the code here is not mine. the majority of the formatting here is taken from the ever so popular sadgrl's layout template which you can find at https://sadgrl.online/projects/layout-builder/, which i found from https://rafaelpro3728dos.neocities.org. highly recommend both of them, check them out they are both way more talented than i. with that have fun lookin at this lol-->
@@ -306,7 +306,50 @@ body {
                     flex-wrap: wrap;
                 }
             }
+            /* Style The Dropdown Button */
+.dropbtn {
+  color: #ED64F5;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #130a2d
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #130a2d
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0a0a0a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #ED64F5;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
         </style>
+        
   </head>
   <body>
    <div id="container">
@@ -316,7 +359,15 @@ body {
                 <nav id="navbar" style="margin-bottom: 10px;">
                     <ul>
                         <li><a href="https://ikupoku.me">home</a></li>
-                        <li><a href="https://ikupoku.me/enjoyables">stuff i like</a></li>
+                        <li><span class="dropdown">
+                            <button class="dropbtn">stuff i like</button>
+                            <div class="dropdown-content">
+                              <a href="https://ikupoku.neocities.org/music">gunpla</a>
+                              <a href="https://ikupoku.neocities.org/websites">mocs</a>
+                              <a href="https://ikupoku.neocities.org/">doodles</a>
+                              <a href="https://ikupoku.neocities.org/misc">misc</a>
+                            </div>
+                          </span></li>
                         <li><a href="https://ikupoku.me/sitemap">sitemap</a></li>
                         <li><a href="https://ikupoku.me/projects">projects</a></li>
                         <li><a href="https://ikupoku.me/collections">collections</a></li>
@@ -332,12 +383,17 @@ body {
                             <li class= "nLato">text here</li>
                         </ul>
                     </div>
-                </aside>
+                </aside>˙
                 <main>
-                    <center><h3>header 3<br></h3></center>
-                    <center><h2>header 2<br></h2></center>
-                    <center><h1>header 1<br></h1></center>
-                    <center>normal text</center>
+                    <center><h3>music!<br></h3></center>
+                    <p> 
+                    <br>
+                    hi my name is ben if you couldnt have guessed already i sometimes go by ikupoku now on the internet though i am a chinese freshman here and i am alright at school<br>i really like a lot of different things (you can find all the stuff in the handy dandy sidebar) but the main things are gunpla/gundam, touhou*, engineering, vocaloid, and oxford commas. you can find me on saturn also<br><br>
+                    <h3>the point<br></h3>
+                    i made this website just because i wanted an auto changing bio on saturn and couldnt get it because the saturn web app is killed, so the next best thing clearly was to spend a few days learning css and html and stealing and stitching together copious amounts of code from other websites to make this. also like meant to be portfolio kinda and student and blah blah blah<br>
+                    actually on the topic of origin stories the name of ikupoku came from a science goformative code in like 6th or 7th grade which read ik2p0k and i thought of iku nagae from touhou because my brain is rotted and is beyond repair (i swear i am not as a degenerate as i read here) and just made it rhyme lol<br>hey if you wanna make some cool websites like this one check out <a href="https://neocities.org/" target=blank>neocities.org</a> its an awesomely accessible introduction to html and css and everything that makes a website a website i know its super intimidating at first but i was pretty much had an anti-knowledge about cs and coding and still got this website pretty cool and functional within a week, its really cool.<br>
+                    anyways, thats about it for intros and whatever, check out some of more of what i do if youd like its like 11 right now im thirsty im gonna go to bed now
+                    
                 
 
                 </main>
