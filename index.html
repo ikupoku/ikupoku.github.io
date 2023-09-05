@@ -12,7 +12,337 @@
     <link rel="icon" href="https://ikupoku.me/nyukkuri.png">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <!-- hi hi if youre seeing this that means youre using inspect element to look through my website! im honestly flattered but you should know that a LOT of the code here is not mine. the majority of the formatting here is taken from the ever so popular sadgrl's layout template which you can find at https://sadgrl.online/projects/layout-builder/, which i found from https://rafaelpro3728dos.neocities.org. highly recommend both of them, check them out they are both way more talented than i. with that have fun lookin at this lol-->
-    
+    <style>/* unvisited link */
+      a:link {
+          color: #ED64F5;
+        }
+        
+        /* visited link */
+        a:visited {
+          color: #ED64F5;
+        }
+        
+        /* mouse over link */
+        a:hover {
+          color: #a49cba;
+        }
+        
+        /* selected link */
+        a:active {
+          color: blue;
+        } 
+            @keyframes move-it {
+          0% {
+            background-position: initial;
+          }
+          100% {
+            background-position: 200px 0px;
+          }
+        }
+        
+        @font-face {
+          font-family: Lato;
+          src: url(Lato-Regular.ttf);
+        }
+        body {  
+          background: repeating-linear-gradient(
+          -45deg,
+          #171717,
+          #171717 5%,
+          #0D0D0D 5%,
+          #0D0D0D 10%
+        );
+          background-size: 200px 200px;
+          animation: move-it 4s linear infinite;
+        }
+        body {
+         background-color: #0D0D0D;
+        }
+          .nLato {
+            font-size: 16px;
+            font-family: Lato, sans-serif;
+            color: #CCCCCC;
+          }
+          h1 {
+            color: #CCCCCC;
+            font-size: 30px;
+          }
+          h3 {
+            color: #CCCCCC;
+            font-size: 30px;
+          }
+          .header {
+            height: auto;
+            max-height: 340px;
+            border-style: solid;
+            border-width: 5px 5px 0px 5px;
+            border-color: #262626;
+            
+          }
+          p {
+            font-size: 16px;
+            font-family: Lato, sans-serif;
+            color: #CCCCCC;
+            }
+         #dynamic-logo {
+            width: 100%;
+         }
+         #container {
+              font-size: 16px;
+            font-family: Lato, sans-serif;
+            color: #CCCCCC;
+            }
+          .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        } 
+                    /* these are variables that are being used in the code
+            these tended to confuse some people, so I only kept 
+            the images as variables */
+                    :root {
+                      --header-image: url('');
+                    }
+                    body {
+                        font-family: 'nLato', sans-serif;
+                        margin: 0;
+                    }
+        
+                    * {
+                        box-sizing: border-box;
+                    }
+        
+                    /* below this line is CSS for the layout */
+        
+                    /* the "container" is what wraps your entire website */
+                    /* if you want something (like the header) to be Wider than
+            the other elements, you will need to move that div outside
+            of the container */
+                    #container {
+                        max-width: 1100px;
+                        /* this is the width of your layout! */
+                        /* if you change the above value, scroll to the bottom
+              and change the media query according to the comment! */
+                        margin: 0 auto;
+                        border: 0px;
+                        /* this centers the entire page */
+                    }
+        
+                    /* the area below is for all links on your page
+            EXCEPT for the navigation */
+                    #container a {
+                        font-weight: bold;
+                    }
+                    #header {
+                        width: 100%;
+                        background-color: #5e4e8c;
+                        /* header color here! */
+                        height: 150px;
+                        /* this is only for a background image! */
+                        /* if you want to put images IN the header, 
+              you can add them directly to the <div id="header"></div> element! */
+                        background-image: var(--header-image);
+                        background-size: 100%;
+                    }
+        
+                    /* navigation section!! */
+                    #navbar {
+                      height: auto;
+                        min-height: 45px;
+                        background-color: #13092D;
+                        /* navbar color */
+                        width: 100%;
+                        border: 5px solid #262626;
+                    }
+        
+                    #navbar ul {
+                        display: flex;
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+                        justify-content: space-evenly;
+                    }
+        
+                    #navbar li {
+                        padding-top: 10px;
+                    }
+        
+                    /* navigation links*/
+                    #navbar li a {
+                        color: #ED64F5;
+                        /* navbar text color */
+                        font-weight: 800;
+                        text-decoration: none;
+                        /* this removes the underline */
+                    }
+        
+                    /* navigation link when a link is hovered over */
+                    #navbar li a:hover {
+                        color: #a49cba;
+                    }
+        
+                    #flex {
+                        display: flex;
+                    }
+        
+                    /* this colors BOTH sidebars
+            if you want to style them separately,
+            create styles for #leftSidebar and #rightSidebar */
+                    aside {
+                        background-color: #241445;
+                        width: 200px;
+                        padding: 20px;
+                        font-size: smaller;
+                        border: 5px solid #262626;
+                        /* this makes the sidebar text slightly smaller */
+                    }
+        
+        
+                    /* this is the color of the main content area,
+            between the sidebars! */
+                    main {
+                        background-color: #191919;
+                        border: 5px solid #262626;
+                        flex: 1;
+                        padding: 20px;
+                        order: 2;
+                    }
+        
+                    /* what's this "order" stuff about??
+            allow me to explain!
+            if you're using both sidebars, the "order" value
+            tells the CSS the order in which to display them.
+            left sidebar is 1, content is 2, and right sidebar is 3! */
+        
+                    */ #leftSidebar {
+                        order: 1;
+                    }
+        
+                    #rightSidebar {
+                        order: 3;
+                    }
+        
+                    footer {
+                        background-color: #13092D;
+                        /* background color for footer */
+                        width: 100%;
+                        padding: 10px;
+                        text-align: center;
+                        border: 5px solid #262626;
+                        overflow: auto;
+                        height: auto;
+                        margin-bottom: 10px
+                        /* this centers the footer text */
+                    }
+        
+                    strong {
+                        /* this styles bold text */
+                        color: #ED64F5;
+                    }
+        
+                    /* this is just a cool box, it's the darker colored one */
+                    .box {
+                        background-color: #13092D;
+                        border: 4px solid #262626;
+                        padding: 10px;
+                    }
+                    #topBar {
+                        width: 100%;
+                        padding: 10px;
+                        font-size: smaller;
+                        background-color: #13092D;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        border-style: solid;
+                        border-width: 5px 5px 5px 5px;
+                        border-color: #262626;
+                        text-align: center;
+                        overflow: auto;
+                        height: auto;
+                        
+                    }
+        
+        
+                    /* BELOW THIS POINT IS MEDIA QUERY */
+        
+                    /* so you wanna change the width of your page? 
+            by default, the container width is 900px.
+            in order to keep things responsive, take your new height,
+            and then subtrack it by 100. use this new number as the 
+            "max-width" value below
+            */
+        
+                    @media only screen and (max-width: 1300px) {
+                        #flex {
+                            flex-wrap: wrap;
+                        }
+        
+                        aside {
+                            width: 100%;
+                        }
+        
+                        /* the order of the items is adjusted here for responsiveness!
+              since the sidebars would be too small on a mobile device.
+              feel free to play around with the order!
+              */
+                        main {
+                            order: 1;
+                        }
+        
+                        #leftSidebar {
+                            order: 2;
+                        }
+        
+                        #rightSidebar {
+                            order: 3;
+                        }
+        
+                        #navbar ul {
+                            flex-wrap: wrap;
+                        }
+                    }
+        
+                      /* Style The Dropdown Button */
+        .dropbtn {
+          color: #ED64F5;
+                        /* navbar text color */
+                        font-weight: 800;
+                        text-decoration: none;
+                        /* this removes the underline */
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+          background-color: #1b006c00
+        }
+        
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          display: inline-block;
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #0a0a0a;
+          min-width: 160px;
+          border-color:#AAAAAA;
+          border-width: 5px 5px 5px 5px;
+          z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: #ED64F5;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }</style>
   </head>
   <body>
    <div id="container">
@@ -45,7 +375,6 @@
                           <div class="dropdown-content">
                             <a href="https://ikupoku.me/mocs">mocs</a>
                             <a href="https://ikupoku.me/gunpla">gunpla</a>
-                            <a href="https://ikupoku.me/doodles">drawings (dont expect much)</a>
                             <a href="https://ikupoku.me/lpts">life pro tips</a>
                             <a href="https://ikupoku.me/colmisc">misc</a>
                           </div>
